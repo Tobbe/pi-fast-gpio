@@ -4,6 +4,9 @@ pigpio.js
 Accessing the [pigpio](http://abyz.co.uk/rpi/pigpio/index.html) daemon to get
 hardware PWM control in node.js on the Raspberry Pi. 
 
+This code is based off of the [python library](http://abyz.co.uk/rpi/pigpio/python.html)
+included with the pigpio download.
+
 Installation
 ------------
 
