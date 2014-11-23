@@ -1,0 +1,27 @@
+{
+  "name": "pigpio.js",
+  "version": "0.0.1",
+  "description": "Access the pigpio daemon (pigpiod) from node.js",
+  "main": "js_servo.js",
+  "dependencies": {
+    "put": "0.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pigpio",
+    "servo",
+    "pwm",
+    "hardware pwm",
+    "raspberry",
+    "pi",
+    "raspberry pi",
+    "raspberrypi",
+    "dma",
+    "gpio"
+  ],
+  "author": "Tobbe Lundberg",
+  "license": "ISC"
+}
