@@ -98,7 +98,7 @@ function logDataStream(data){
     // insert a line break after every 8th bit
     if ((i + 1) % 8 === 0) {
       print += '\n';
-    };
+    }
   }
 
   // log the stream
