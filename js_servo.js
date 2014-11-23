@@ -9,13 +9,10 @@ var run = true;
 var pw = 1100;
 var change = 50;
 
-// pi = pigpio.pi();
-
 init(function(err, client) {
   setTimeout(function() { run = false; }, 20000);
 
   var servoUpdateInterval = setInterval(function() {
-    // pi.set_servo_pulsewidth(SERVO_GPIO, pw)
     setServoPulsewidth(client, SERVO_GPIO_1, pw);
     setServoPulsewidth(client, SERVO_GPIO_2, pw);
     console.log('servo pulsewidth ' + pw + ' microseconds.');
@@ -26,7 +23,6 @@ init(function(err, client) {
     }
 
     if (!run) {
-      // pi.set_servo_pulsewidth(SERVO_GPIO, 0); // servo off
       setServoPulsewidth(client, SERVO_GPIO_1, 0); // servo off
       setServoPulsewidth(client, SERVO_GPIO_2, 0); // servo off
       clearInterval(servoUpdateInterval);
@@ -37,8 +33,8 @@ init(function(err, client) {
 function init(cb) {
   var client = new net.Socket();
   client.on('data', function(data) {
-    //console.log('DATA: ');
-    //logDataStream(data);
+    console.log('DATA: ');
+    logDataStream(data);
   });
 
   client.connect(PORT, HOST, function() {
