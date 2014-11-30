@@ -2,14 +2,13 @@
   "name": "pigpio.js",
   "version": "0.0.1",
   "description": "Access the pigpio daemon (pigpiod) from node.js",
-  "main": "js_servo.js",
+  "author": "Tobbe Lundberg <tobbe@tlundberg.com> (http://tlundberg.com)",
+  "main": "pigpio.js",
+  "license": "ISC",
   "dependencies": {
     "put": "0.0.6"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "pigpio",
     "servo",
@@ -22,6 +21,8 @@
     "dma",
     "gpio"
   ],
-  "author": "Tobbe Lundberg",
-  "license": "ISC"
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/Tobbe/pigpio.js.git"
+  }
 }
