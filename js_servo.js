@@ -4,8 +4,9 @@ var SERVO_1_GPIO = 18;
 var SERVO_2_GPIO = 23;
 var HOST = '127.0.0.1';
 var PORT = 8888;
+
 var run = true;
-var pw = 1100;
+var pw = 1100; // pulsewidth in microseconds
 var change = 50;
 
 var gpio = new PiGPIOjs();
@@ -18,9 +19,11 @@ gpio.connect(HOST, PORT, function(err) {
   var servoUpdateInterval = setInterval(function() {
     gpio.setServoPulsewidth(SERVO_1_GPIO, pw);
     gpio.setServoPulsewidth(SERVO_2_GPIO, pw);
-    console.log('servo pulsewidth ' + pw + ' microseconds.');
+
     pw += change;
 
+    // These values are chosen to be safe for most servos.
+    // Your particular servo might be able to go further.
     if (pw < 1150 || pw > 1850) {
       change = -change;
     }
