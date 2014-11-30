@@ -19,10 +19,24 @@ Start the pigpio daemon:
 
     $ sudo pigpiod
 
-Make sure you have two servos connected to your Raspberry Pi. One on GPIO18
-and one on GPIO23.
+In your program:
 
-Run the code:
+ 1) require(...) the pigpio.js library
+ 2) Create a new instance of the PiGPIOjs class
+ 3) Call connect(...) to connect to the pigpiod daemon
+ 4) When connected, do what you please with the GPIOs on your Raspberry Pi
+ 5) Call close() when you're done and about to exit your program.
+
+Example
+-------
+
+An example is included in the examples/ directory that drives two servos.
+Watch it in action here: http://youtu.be/AnlUtAq5oAM
+
+Before running the example, make sure you have two servos connected to your
+Raspberry Pi. One on GPIO18 and one on GPIO23.
+
+Go to the examples/ directory and run the code:
 
     $ node js_servo.js
 

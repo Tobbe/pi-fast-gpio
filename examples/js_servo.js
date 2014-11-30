@@ -1,4 +1,4 @@
-var PiGPIOjs = require('./pigpio.js');
+var PiGPIOjs = require('../pigpio.js');
 
 var SERVO_1_GPIO = 18;
 var SERVO_2_GPIO = 23;
