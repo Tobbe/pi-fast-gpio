@@ -21,11 +21,11 @@ Start the pigpio daemon:
 
 In your program:
 
- 1) require(...) the pigpio.js library
- 2) Create a new instance of the PiGPIOjs class
- 3) Call connect(...) to connect to the pigpiod daemon
- 4) When connected, do what you please with the GPIOs on your Raspberry Pi
- 5) Call close() when you're done and about to exit your program.
+ 1. require(...) the pigpio.js library
+ 2. Create a new instance of the PiGPIOjs class
+ 3. Call connect(...) to connect to the pigpiod daemon
+ 4. When connected, do what you please with the GPIOs on your Raspberry Pi
+ 5. Call close() when you're done and about to exit your program.
 
 Example
 -------
