@@ -2,7 +2,7 @@ var net = require('net');
 var Put = require('put');
 
 /** @constructor */
-function PiGPIOjs() {}
+function PiFastGpio() {}
 
 /**
  * Connects to the pigpio daemon.
@@ -17,7 +17,7 @@ function PiGPIOjs() {}
  * @param {number} port - The port on the host to connect to
  * @param {function} cb - Callback function
  */
-PiGPIOjs.prototype.connect = function(host, port, cb) {
+PiFastGpio.prototype.connect = function(host, port, cb) {
   this.client = net.connect({host: host, port: port});
   
   this.client.on('connect', function() {
@@ -35,7 +35,7 @@ PiGPIOjs.prototype.connect = function(host, port, cb) {
 /**
  * Half-closes the connection. We might still get some data from the server.
  */
-PiGPIOjs.prototype.close = function() {
+PiFastGpio.prototype.close = function() {
   this.client.end();
 };
 
@@ -62,7 +62,7 @@ PiGPIOjs.prototype.close = function() {
  *              0 (off),
  *              500 (most anti-clockwise) - 2500 (most clockwise).
  */
-PiGPIOjs.prototype.setServoPulsewidth = function(userGpio, pulsewidth) {
+PiFastGpio.prototype.setServoPulsewidth = function(userGpio, pulsewidth) {
   var cmd = Put()
             .word32le(8) // _PI_CMD_SERVO
             .word32le(userGpio)
@@ -72,4 +72,4 @@ PiGPIOjs.prototype.setServoPulsewidth = function(userGpio, pulsewidth) {
   this.client.write(cmd.buffer());
 };
 
-module.exports = PiGPIOjs;
+module.exports = PiFastGpio;

@@ -1,9 +1,9 @@
 {
-  "name": "pigpio.js",
+  "name": "pi-fast-gpio",
   "version": "0.0.1",
-  "description": "Access the pigpio daemon (pigpiod) from node.js",
+  "description": "Super fast GPIO access on the Raspberry Pi using the pigpio daemon (for pwm, servo control, etc)",
   "author": "Tobbe Lundberg <tobbe@tlundberg.com> (http://tlundberg.com)",
-  "main": "pigpio.js",
+  "main": "index.js",
   "license": "ISC",
   "dependencies": {
     "put": "0.0.6"
@@ -23,6 +23,6 @@
   ],
   "repository" : {
     "type" : "git",
-    "url" : "https://github.com/Tobbe/pigpio.js.git"
+    "url" : "https://github.com/Tobbe/pi-fast-gpio.git"
   }
 }

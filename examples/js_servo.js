@@ -1,4 +1,4 @@
-var PiGPIOjs = require('../pigpio.js');
+var PiFastGpio = require('../index.js');
 
 var SERVO_1_GPIO = 18;
 var SERVO_2_GPIO = 23;
@@ -9,7 +9,7 @@ var run = true;
 var pw = 1100; // pulsewidth in microseconds
 var change = 50;
 
-var gpio = new PiGPIOjs();
+var gpio = new PiFastGpio();
 
 gpio.connect(HOST, PORT, function(err) {
   if (err) throw err;
