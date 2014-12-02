@@ -72,4 +72,28 @@ PiFastGpio.prototype.setServoPulsewidth = function(userGpio, pulsewidth) {
   this.client.write(cmd.buffer());
 };
 
+/**
+ * Starts (non-zero dutycycle) or stops (0) PWM pulses on the gpio.
+ *
+ *     pi.set_PWM_dutycycle(4,   0) # PWM off
+ *     pi.set_PWM_dutycycle(4,  64) # PWM 1/4 on
+ *     pi.set_PWM_dutycycle(4, 128) # PWM 1/2 on
+ *     pi.set_PWM_dutycycle(4, 192) # PWM 3/4 on
+ *     pi.set_PWM_dutycycle(4, 255) # PWM full on
+ *
+ * @param {number} userGpio The number of the gpio to address. 0-31
+ * @param {number} dutycycle The pwm dutycycle to use.
+ *              0 (off),
+ *              255 (full on)
+ */
+PiFastGpio.prototype.setPwmDutycycle = function(userGpio, dutycycle) {
+  var cmd = Put()
+            .word32le(5) // _PI_CMD_PWM
+            .word32le(userGpio)
+            .word32le(dutycycle)
+            .word32le(0);
+
+  this.client.write(cmd.buffer());
+};
+
 module.exports = PiFastGpio;
