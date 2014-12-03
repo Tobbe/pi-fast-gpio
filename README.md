@@ -33,20 +33,41 @@ In your program:
  4. When connected, do what you please with the GPIOs on your Raspberry Pi
  5. Call close() when you're done and about to exit your program.
 
-Example
--------
+Examples
+--------
 
-An example is included in the examples/ directory that drives two servos.
-Watch it in action here: http://youtu.be/AnlUtAq5oAM
+There are two examples included, one that drives two servos, and one that uses
+PWM to change the brightness of two LEDs
 
-Before running the example, make sure you have two servos connected to your
-Raspberry Pi. One on GPIO18 and one on GPIO23.
+Before running any of the examples, make sure the pigpio daemon is running:
+
+    $ sudo pigpiod
+
+### Servos example
+
+Watch the servos example in action here: http://youtu.be/AnlUtAq5oAM
+
+Before running the example, please connect two servos to your Raspberry Pi.
+One on GPIO18 and one on GPIO23.
 
 Go to the examples/ directory and run the code:
 
     $ node js_servo.js
 
 Watch the servos turn!
+
+### LED PWM example
+
+Watch the LED PWM example in action here: http://youtu.be/OW6yF4NuwLE
+
+Before running the example, please connect to LEDs to your Raspberry Pi with
+suitable resistors. Connect one LED to GPIO24 and one to GPIO25.
+
+Go to the examples/ directory and run the code:
+
+    $ node js_pwm.js
+
+Watch the LEDs light up with different brightness!
 
 Pin Layout tables
 -----------------
