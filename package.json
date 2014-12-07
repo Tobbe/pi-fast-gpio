@@ -1,6 +1,6 @@
 {
   "name": "pi-fast-gpio",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Super fast GPIO access on the Raspberry Pi using the pigpio daemon (for pwm, servo control, etc)",
   "author": "Tobbe Lundberg <tobbe@tlundberg.com> (http://tlundberg.com)",
   "main": "index.js",
