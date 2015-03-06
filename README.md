@@ -109,3 +109,8 @@ Pin Layout tables
 | GPIO 9  (SP10 MISO) | 21  | 22  | GPIO 25             |
 | GPIO 11 (SP10 SCLK) | 23  | 24  | GPIO 8 (SP10 CE0 N) |
 | GROUND              | 25  | 26  | GPIO 7 (SP10 CE1 N) |
+
+License
+-------
+
+ISC - See the LICENSE file
